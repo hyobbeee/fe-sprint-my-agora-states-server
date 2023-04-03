@@ -4,10 +4,13 @@ on: [push, pull_request]
 
 jobs:
   test:
+  # 러너 : 윈도우, 맥, 우분투
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      # 작업단계
       - name: Bare Minimum Requirements
+      # 노드 버전 정해주기
         uses: actions/setup-node@v1
         with:
           node-version: '16'
